@@ -30,7 +30,7 @@ simulated latency (`src/services/_delay.ts`).
 |---|---|---|
 | Shell + auth | `/login`, layout | Sidebar/header chrome, role-based auth (mock session: any credentials sign in as admin) |
 | Dashboard | `/` | KPI cards, pipeline status bar, refresh queue, top keywords, my tasks, AI Humanizer status widget |
-| Content pipeline | `/pipeline`, `/pipeline/refresh`, `/pipeline/content-library` | Kanban board across 10 stages (Researching → … → Publish), article detail panel, refresh queue, content library |
+| Content pipeline | `/pipeline`, `/pipeline/refresh`, `/pipeline/content-library` | Kanban board across 12 stages (New Article → … → Publish), article detail panel with stage stepper, refresh queue, content library |
 | Editorial calendar | `/calendar` | Calendar view of planned/published content; opens pipeline article panel |
 | RSS monitor | `/rss` | Feed monitoring, keyword search (`?q=`), article triage |
 | My Tasks | `/my-tasks` | Personal task list |
