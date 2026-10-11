@@ -11,5 +11,8 @@ export default defineConfig({
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
+    // Pure client-side app — this is a frontend mock with no server backend;
+    // production CMS components assume a browser environment.
+    spa: { enabled: true },
   },
 });
