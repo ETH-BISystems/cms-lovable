@@ -15,8 +15,24 @@ const handlers: Record<string, Handler> = {
   // as each module is migrated in later phases.
 };
 
-export function registerMockFunction(name: string, handler: Handler): void {
+/**
+ * Registration semantics: the FIRST plain registration wins — later plain
+ * registrations are ignored (module-scope fallbacks must not clobber a real
+ * store-backed handler that was registered earlier). Pass `{ override: true }`
+ * for authoritative store-backed handlers so they win regardless of import
+ * order (used by the central registry in `mockRegistrations.ts`).
+ */
+export function registerMockFunction(
+  name: string,
+  handler: Handler,
+  options?: { override?: boolean },
+): void {
+  if (handlers[name] && !options?.override) return;
   handlers[name] = handler;
+}
+
+export function hasMockFunction(name: string): boolean {
+  return name in handlers;
 }
 
 export async function callFunction<TIn = unknown, TOut = unknown>(

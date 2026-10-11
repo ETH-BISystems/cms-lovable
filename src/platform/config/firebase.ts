@@ -24,6 +24,7 @@ function stub(name: string): Record<string, unknown> {
 }
 
 export const firebaseApp = stub('app');
+export const app = firebaseApp;
 export const auth = stub('auth');
 export const db = stub('db');
 export const functions = stub('functions');

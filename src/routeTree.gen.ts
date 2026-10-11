@@ -13,6 +13,53 @@ import { Route as AppRouteImport } from './routes/_app'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AppIndexRouteImport } from './routes/_app/index'
 import { Route as AppSplatRouteImport } from './routes/_app/$'
+import { Route as AppCpRouteImport } from './routes/_app/_cp'
+import { Route as AppPpRouteImport } from './routes/_app/_pp'
+import { Route as AppAssetsRouteImport } from './routes/_app/assets'
+import { Route as AppExperienceRouteImport } from './routes/_app/experience'
+import { Route as AppIframesRouteImport } from './routes/_app/iframes'
+import { Route as AppMyTasksRouteImport } from './routes/_app/my-tasks'
+import { Route as AppNewsletterRouteImport } from './routes/_app/newsletter'
+import { Route as AppServiceTicketsRouteImport } from './routes/_app/service-tickets'
+import { Route as AppSettingsRouteImport } from './routes/_app/settings'
+import { Route as AppTransferPartnersRouteImport } from './routes/_app/transfer-partners'
+import { Route as AppPpCalendarRouteImport } from './routes/_app/_pp/calendar'
+import { Route as AppPpRssRouteImport } from './routes/_app/_pp/rss'
+import { Route as AppKeywordsIndexRouteImport } from './routes/_app/keywords/index'
+import { Route as AppKeywordsAiVisibilityRouteImport } from './routes/_app/keywords/ai-visibility'
+import { Route as AppKeywordsBacklinksRouteImport } from './routes/_app/keywords/backlinks'
+import { Route as AppKeywordsBrandMonitoringRouteImport } from './routes/_app/keywords/brand-monitoring'
+import { Route as AppKeywordsBusinessResearchRouteImport } from './routes/_app/keywords/business-research'
+import { Route as AppKeywordsCompetitorsRouteImport } from './routes/_app/keywords/competitors'
+import { Route as AppKeywordsContentGapRouteImport } from './routes/_app/keywords/content-gap'
+import { Route as AppKeywordsDomainOverviewRouteImport } from './routes/_app/keywords/domain-overview'
+import { Route as AppKeywordsInternalLinksRouteImport } from './routes/_app/keywords/internal-links'
+import { Route as AppKeywordsOrganicResearchRouteImport } from './routes/_app/keywords/organic-research'
+import { Route as AppKeywordsOverviewRouteImport } from './routes/_app/keywords/overview'
+import { Route as AppKeywordsPageAuditRouteImport } from './routes/_app/keywords/page-audit'
+import { Route as AppKeywordsRankTrackerRouteImport } from './routes/_app/keywords/rank-tracker'
+import { Route as AppKeywordsSerpRouteImport } from './routes/_app/keywords/serp'
+import { Route as AppKeywordsTopPagesRouteImport } from './routes/_app/keywords/top-pages'
+import { Route as AppKeywordsTrafficRouteImport } from './routes/_app/keywords/traffic'
+import { Route as AppKeywordsTrendsRouteImport } from './routes/_app/keywords/trends'
+import { Route as AppSeoIndexRouteImport } from './routes/_app/seo/index'
+import { Route as AppSeoAiOverviewRouteImport } from './routes/_app/seo/ai-overview'
+import { Route as AppSeoPageAuditsRouteImport } from './routes/_app/seo/page-audits'
+import { Route as AppSeoPositionTrackingRouteImport } from './routes/_app/seo/position-tracking'
+import { Route as AppTrafficMarketIndexRouteImport } from './routes/_app/traffic-market/index'
+import { Route as AppTrafficMarketAiTrafficRouteImport } from './routes/_app/traffic-market/ai-traffic'
+import { Route as AppTrafficMarketDistributionRouteImport } from './routes/_app/traffic-market/distribution'
+import { Route as AppTrafficMarketMarketOverviewRouteImport } from './routes/_app/traffic-market/market-overview'
+import { Route as AppTrafficMarketSourcesRouteImport } from './routes/_app/traffic-market/sources'
+import { Route as AppTrafficMarketTopPagesRouteImport } from './routes/_app/traffic-market/top-pages'
+import { Route as AppZernioCallbackRouteImport } from './routes/_app/zernio/callback'
+import { Route as AppCpCardsIndexRouteImport } from './routes/_app/_cp/cards/index'
+import { Route as AppCpCardsTransferPartnersRouteImport } from './routes/_app/_cp/cards/transfer-partners'
+import { Route as AppPpPipelineIndexRouteImport } from './routes/_app/_pp/pipeline/index'
+import { Route as AppPpPipelineContentLibraryRouteImport } from './routes/_app/_pp/pipeline/content-library'
+import { Route as AppPpPipelineRefreshRouteImport } from './routes/_app/_pp/pipeline/refresh'
+import { Route as AppKeywordsIntelligenceIndexRouteImport } from './routes/_app/keywords/intelligence/index'
+import { Route as AppKeywordsIntelligenceRecommendationIdRouteImport } from './routes/_app/keywords/intelligence/$recommendationId'
 
 const AppRoute = AppRouteImport.update({
   id: '/_app',
@@ -33,30 +80,561 @@ const AppSplatRoute = AppSplatRouteImport.update({
   path: '/$',
   getParentRoute: () => AppRoute,
 } as any)
+const AppCpRoute = AppCpRouteImport.update({
+  id: '/_cp',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPpRoute = AppPpRouteImport.update({
+  id: '/_pp',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAssetsRoute = AppAssetsRouteImport.update({
+  id: '/assets',
+  path: '/assets',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppExperienceRoute = AppExperienceRouteImport.update({
+  id: '/experience',
+  path: '/experience',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppIframesRoute = AppIframesRouteImport.update({
+  id: '/iframes',
+  path: '/iframes',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppMyTasksRoute = AppMyTasksRouteImport.update({
+  id: '/my-tasks',
+  path: '/my-tasks',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppNewsletterRoute = AppNewsletterRouteImport.update({
+  id: '/newsletter',
+  path: '/newsletter',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppServiceTicketsRoute = AppServiceTicketsRouteImport.update({
+  id: '/service-tickets',
+  path: '/service-tickets',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTransferPartnersRoute = AppTransferPartnersRouteImport.update({
+  id: '/transfer-partners',
+  path: '/transfer-partners',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppPpCalendarRoute = AppPpCalendarRouteImport.update({
+  id: '/calendar',
+  path: '/calendar',
+  getParentRoute: () => AppPpRoute,
+} as any)
+const AppPpRssRoute = AppPpRssRouteImport.update({
+  id: '/rss',
+  path: '/rss',
+  getParentRoute: () => AppPpRoute,
+} as any)
+const AppKeywordsIndexRoute = AppKeywordsIndexRouteImport.update({
+  id: '/keywords/',
+  path: '/keywords/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsAiVisibilityRoute = AppKeywordsAiVisibilityRouteImport.update({
+  id: '/keywords/ai-visibility',
+  path: '/keywords/ai-visibility',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsBacklinksRoute = AppKeywordsBacklinksRouteImport.update({
+  id: '/keywords/backlinks',
+  path: '/keywords/backlinks',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsBrandMonitoringRoute =
+  AppKeywordsBrandMonitoringRouteImport.update({
+    id: '/keywords/brand-monitoring',
+    path: '/keywords/brand-monitoring',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsBusinessResearchRoute =
+  AppKeywordsBusinessResearchRouteImport.update({
+    id: '/keywords/business-research',
+    path: '/keywords/business-research',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsCompetitorsRoute = AppKeywordsCompetitorsRouteImport.update({
+  id: '/keywords/competitors',
+  path: '/keywords/competitors',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsContentGapRoute = AppKeywordsContentGapRouteImport.update({
+  id: '/keywords/content-gap',
+  path: '/keywords/content-gap',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsDomainOverviewRoute =
+  AppKeywordsDomainOverviewRouteImport.update({
+    id: '/keywords/domain-overview',
+    path: '/keywords/domain-overview',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsInternalLinksRoute =
+  AppKeywordsInternalLinksRouteImport.update({
+    id: '/keywords/internal-links',
+    path: '/keywords/internal-links',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsOrganicResearchRoute =
+  AppKeywordsOrganicResearchRouteImport.update({
+    id: '/keywords/organic-research',
+    path: '/keywords/organic-research',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsOverviewRoute = AppKeywordsOverviewRouteImport.update({
+  id: '/keywords/overview',
+  path: '/keywords/overview',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsPageAuditRoute = AppKeywordsPageAuditRouteImport.update({
+  id: '/keywords/page-audit',
+  path: '/keywords/page-audit',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsRankTrackerRoute = AppKeywordsRankTrackerRouteImport.update({
+  id: '/keywords/rank-tracker',
+  path: '/keywords/rank-tracker',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsSerpRoute = AppKeywordsSerpRouteImport.update({
+  id: '/keywords/serp',
+  path: '/keywords/serp',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsTopPagesRoute = AppKeywordsTopPagesRouteImport.update({
+  id: '/keywords/top-pages',
+  path: '/keywords/top-pages',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsTrafficRoute = AppKeywordsTrafficRouteImport.update({
+  id: '/keywords/traffic',
+  path: '/keywords/traffic',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppKeywordsTrendsRoute = AppKeywordsTrendsRouteImport.update({
+  id: '/keywords/trends',
+  path: '/keywords/trends',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSeoIndexRoute = AppSeoIndexRouteImport.update({
+  id: '/seo/',
+  path: '/seo/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSeoAiOverviewRoute = AppSeoAiOverviewRouteImport.update({
+  id: '/seo/ai-overview',
+  path: '/seo/ai-overview',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSeoPageAuditsRoute = AppSeoPageAuditsRouteImport.update({
+  id: '/seo/page-audits',
+  path: '/seo/page-audits',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppSeoPositionTrackingRoute = AppSeoPositionTrackingRouteImport.update({
+  id: '/seo/position-tracking',
+  path: '/seo/position-tracking',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTrafficMarketIndexRoute = AppTrafficMarketIndexRouteImport.update({
+  id: '/traffic-market/',
+  path: '/traffic-market/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTrafficMarketAiTrafficRoute =
+  AppTrafficMarketAiTrafficRouteImport.update({
+    id: '/traffic-market/ai-traffic',
+    path: '/traffic-market/ai-traffic',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppTrafficMarketDistributionRoute =
+  AppTrafficMarketDistributionRouteImport.update({
+    id: '/traffic-market/distribution',
+    path: '/traffic-market/distribution',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppTrafficMarketMarketOverviewRoute =
+  AppTrafficMarketMarketOverviewRouteImport.update({
+    id: '/traffic-market/market-overview',
+    path: '/traffic-market/market-overview',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppTrafficMarketSourcesRoute = AppTrafficMarketSourcesRouteImport.update({
+  id: '/traffic-market/sources',
+  path: '/traffic-market/sources',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppTrafficMarketTopPagesRoute =
+  AppTrafficMarketTopPagesRouteImport.update({
+    id: '/traffic-market/top-pages',
+    path: '/traffic-market/top-pages',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppZernioCallbackRoute = AppZernioCallbackRouteImport.update({
+  id: '/zernio/callback',
+  path: '/zernio/callback',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppCpCardsIndexRoute = AppCpCardsIndexRouteImport.update({
+  id: '/cards/',
+  path: '/cards/',
+  getParentRoute: () => AppCpRoute,
+} as any)
+const AppCpCardsTransferPartnersRoute =
+  AppCpCardsTransferPartnersRouteImport.update({
+    id: '/cards/transfer-partners',
+    path: '/cards/transfer-partners',
+    getParentRoute: () => AppCpRoute,
+  } as any)
+const AppPpPipelineIndexRoute = AppPpPipelineIndexRouteImport.update({
+  id: '/pipeline/',
+  path: '/pipeline/',
+  getParentRoute: () => AppPpRoute,
+} as any)
+const AppPpPipelineContentLibraryRoute =
+  AppPpPipelineContentLibraryRouteImport.update({
+    id: '/pipeline/content-library',
+    path: '/pipeline/content-library',
+    getParentRoute: () => AppPpRoute,
+  } as any)
+const AppPpPipelineRefreshRoute = AppPpPipelineRefreshRouteImport.update({
+  id: '/pipeline/refresh',
+  path: '/pipeline/refresh',
+  getParentRoute: () => AppPpRoute,
+} as any)
+const AppKeywordsIntelligenceIndexRoute =
+  AppKeywordsIntelligenceIndexRouteImport.update({
+    id: '/keywords/intelligence/',
+    path: '/keywords/intelligence/',
+    getParentRoute: () => AppRoute,
+  } as any)
+const AppKeywordsIntelligenceRecommendationIdRoute =
+  AppKeywordsIntelligenceRecommendationIdRouteImport.update({
+    id: '/keywords/intelligence/$recommendationId',
+    path: '/keywords/intelligence/$recommendationId',
+    getParentRoute: () => AppRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
   '/login': typeof LoginRoute
   '/$': typeof AppSplatRoute
+  '/assets': typeof AppAssetsRoute
+  '/experience': typeof AppExperienceRoute
+  '/iframes': typeof AppIframesRoute
+  '/my-tasks': typeof AppMyTasksRoute
+  '/newsletter': typeof AppNewsletterRoute
+  '/service-tickets': typeof AppServiceTicketsRoute
+  '/settings': typeof AppSettingsRoute
+  '/transfer-partners': typeof AppTransferPartnersRoute
+  '/calendar': typeof AppPpCalendarRoute
+  '/rss': typeof AppPpRssRoute
+  '/keywords/ai-visibility': typeof AppKeywordsAiVisibilityRoute
+  '/keywords/backlinks': typeof AppKeywordsBacklinksRoute
+  '/keywords/brand-monitoring': typeof AppKeywordsBrandMonitoringRoute
+  '/keywords/business-research': typeof AppKeywordsBusinessResearchRoute
+  '/keywords/competitors': typeof AppKeywordsCompetitorsRoute
+  '/keywords/content-gap': typeof AppKeywordsContentGapRoute
+  '/keywords/domain-overview': typeof AppKeywordsDomainOverviewRoute
+  '/keywords/internal-links': typeof AppKeywordsInternalLinksRoute
+  '/keywords/organic-research': typeof AppKeywordsOrganicResearchRoute
+  '/keywords/overview': typeof AppKeywordsOverviewRoute
+  '/keywords/page-audit': typeof AppKeywordsPageAuditRoute
+  '/keywords/rank-tracker': typeof AppKeywordsRankTrackerRoute
+  '/keywords/serp': typeof AppKeywordsSerpRoute
+  '/keywords/top-pages': typeof AppKeywordsTopPagesRoute
+  '/keywords/traffic': typeof AppKeywordsTrafficRoute
+  '/keywords/trends': typeof AppKeywordsTrendsRoute
+  '/seo/ai-overview': typeof AppSeoAiOverviewRoute
+  '/seo/page-audits': typeof AppSeoPageAuditsRoute
+  '/seo/position-tracking': typeof AppSeoPositionTrackingRoute
+  '/traffic-market/ai-traffic': typeof AppTrafficMarketAiTrafficRoute
+  '/traffic-market/distribution': typeof AppTrafficMarketDistributionRoute
+  '/traffic-market/market-overview': typeof AppTrafficMarketMarketOverviewRoute
+  '/traffic-market/sources': typeof AppTrafficMarketSourcesRoute
+  '/traffic-market/top-pages': typeof AppTrafficMarketTopPagesRoute
+  '/zernio/callback': typeof AppZernioCallbackRoute
+  '/keywords/': typeof AppKeywordsIndexRoute
+  '/seo/': typeof AppSeoIndexRoute
+  '/traffic-market/': typeof AppTrafficMarketIndexRoute
+  '/cards/transfer-partners': typeof AppCpCardsTransferPartnersRoute
+  '/pipeline/content-library': typeof AppPpPipelineContentLibraryRoute
+  '/pipeline/refresh': typeof AppPpPipelineRefreshRoute
+  '/keywords/intelligence/$recommendationId': typeof AppKeywordsIntelligenceRecommendationIdRoute
+  '/cards/': typeof AppCpCardsIndexRoute
+  '/pipeline/': typeof AppPpPipelineIndexRoute
+  '/keywords/intelligence/': typeof AppKeywordsIntelligenceIndexRoute
 }
 export interface FileRoutesByTo {
   '/login': typeof LoginRoute
   '/$': typeof AppSplatRoute
   '/': typeof AppIndexRoute
+  '/assets': typeof AppAssetsRoute
+  '/experience': typeof AppExperienceRoute
+  '/iframes': typeof AppIframesRoute
+  '/my-tasks': typeof AppMyTasksRoute
+  '/newsletter': typeof AppNewsletterRoute
+  '/service-tickets': typeof AppServiceTicketsRoute
+  '/settings': typeof AppSettingsRoute
+  '/transfer-partners': typeof AppTransferPartnersRoute
+  '/calendar': typeof AppPpCalendarRoute
+  '/rss': typeof AppPpRssRoute
+  '/keywords/ai-visibility': typeof AppKeywordsAiVisibilityRoute
+  '/keywords/backlinks': typeof AppKeywordsBacklinksRoute
+  '/keywords/brand-monitoring': typeof AppKeywordsBrandMonitoringRoute
+  '/keywords/business-research': typeof AppKeywordsBusinessResearchRoute
+  '/keywords/competitors': typeof AppKeywordsCompetitorsRoute
+  '/keywords/content-gap': typeof AppKeywordsContentGapRoute
+  '/keywords/domain-overview': typeof AppKeywordsDomainOverviewRoute
+  '/keywords/internal-links': typeof AppKeywordsInternalLinksRoute
+  '/keywords/organic-research': typeof AppKeywordsOrganicResearchRoute
+  '/keywords/overview': typeof AppKeywordsOverviewRoute
+  '/keywords/page-audit': typeof AppKeywordsPageAuditRoute
+  '/keywords/rank-tracker': typeof AppKeywordsRankTrackerRoute
+  '/keywords/serp': typeof AppKeywordsSerpRoute
+  '/keywords/top-pages': typeof AppKeywordsTopPagesRoute
+  '/keywords/traffic': typeof AppKeywordsTrafficRoute
+  '/keywords/trends': typeof AppKeywordsTrendsRoute
+  '/seo/ai-overview': typeof AppSeoAiOverviewRoute
+  '/seo/page-audits': typeof AppSeoPageAuditsRoute
+  '/seo/position-tracking': typeof AppSeoPositionTrackingRoute
+  '/traffic-market/ai-traffic': typeof AppTrafficMarketAiTrafficRoute
+  '/traffic-market/distribution': typeof AppTrafficMarketDistributionRoute
+  '/traffic-market/market-overview': typeof AppTrafficMarketMarketOverviewRoute
+  '/traffic-market/sources': typeof AppTrafficMarketSourcesRoute
+  '/traffic-market/top-pages': typeof AppTrafficMarketTopPagesRoute
+  '/zernio/callback': typeof AppZernioCallbackRoute
+  '/keywords': typeof AppKeywordsIndexRoute
+  '/seo': typeof AppSeoIndexRoute
+  '/traffic-market': typeof AppTrafficMarketIndexRoute
+  '/cards/transfer-partners': typeof AppCpCardsTransferPartnersRoute
+  '/pipeline/content-library': typeof AppPpPipelineContentLibraryRoute
+  '/pipeline/refresh': typeof AppPpPipelineRefreshRoute
+  '/keywords/intelligence/$recommendationId': typeof AppKeywordsIntelligenceRecommendationIdRoute
+  '/cards': typeof AppCpCardsIndexRoute
+  '/pipeline': typeof AppPpPipelineIndexRoute
+  '/keywords/intelligence': typeof AppKeywordsIntelligenceIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
   '/_app/$': typeof AppSplatRoute
+  '/_app/_cp': typeof AppCpRouteWithChildren
+  '/_app/_pp': typeof AppPpRouteWithChildren
+  '/_app/assets': typeof AppAssetsRoute
+  '/_app/experience': typeof AppExperienceRoute
+  '/_app/iframes': typeof AppIframesRoute
+  '/_app/my-tasks': typeof AppMyTasksRoute
+  '/_app/newsletter': typeof AppNewsletterRoute
+  '/_app/service-tickets': typeof AppServiceTicketsRoute
+  '/_app/settings': typeof AppSettingsRoute
+  '/_app/transfer-partners': typeof AppTransferPartnersRoute
   '/_app/': typeof AppIndexRoute
+  '/_app/_pp/calendar': typeof AppPpCalendarRoute
+  '/_app/_pp/rss': typeof AppPpRssRoute
+  '/_app/keywords/ai-visibility': typeof AppKeywordsAiVisibilityRoute
+  '/_app/keywords/backlinks': typeof AppKeywordsBacklinksRoute
+  '/_app/keywords/brand-monitoring': typeof AppKeywordsBrandMonitoringRoute
+  '/_app/keywords/business-research': typeof AppKeywordsBusinessResearchRoute
+  '/_app/keywords/competitors': typeof AppKeywordsCompetitorsRoute
+  '/_app/keywords/content-gap': typeof AppKeywordsContentGapRoute
+  '/_app/keywords/domain-overview': typeof AppKeywordsDomainOverviewRoute
+  '/_app/keywords/internal-links': typeof AppKeywordsInternalLinksRoute
+  '/_app/keywords/organic-research': typeof AppKeywordsOrganicResearchRoute
+  '/_app/keywords/overview': typeof AppKeywordsOverviewRoute
+  '/_app/keywords/page-audit': typeof AppKeywordsPageAuditRoute
+  '/_app/keywords/rank-tracker': typeof AppKeywordsRankTrackerRoute
+  '/_app/keywords/serp': typeof AppKeywordsSerpRoute
+  '/_app/keywords/top-pages': typeof AppKeywordsTopPagesRoute
+  '/_app/keywords/traffic': typeof AppKeywordsTrafficRoute
+  '/_app/keywords/trends': typeof AppKeywordsTrendsRoute
+  '/_app/seo/ai-overview': typeof AppSeoAiOverviewRoute
+  '/_app/seo/page-audits': typeof AppSeoPageAuditsRoute
+  '/_app/seo/position-tracking': typeof AppSeoPositionTrackingRoute
+  '/_app/traffic-market/ai-traffic': typeof AppTrafficMarketAiTrafficRoute
+  '/_app/traffic-market/distribution': typeof AppTrafficMarketDistributionRoute
+  '/_app/traffic-market/market-overview': typeof AppTrafficMarketMarketOverviewRoute
+  '/_app/traffic-market/sources': typeof AppTrafficMarketSourcesRoute
+  '/_app/traffic-market/top-pages': typeof AppTrafficMarketTopPagesRoute
+  '/_app/zernio/callback': typeof AppZernioCallbackRoute
+  '/_app/keywords/': typeof AppKeywordsIndexRoute
+  '/_app/seo/': typeof AppSeoIndexRoute
+  '/_app/traffic-market/': typeof AppTrafficMarketIndexRoute
+  '/_app/_cp/cards/transfer-partners': typeof AppCpCardsTransferPartnersRoute
+  '/_app/_pp/pipeline/content-library': typeof AppPpPipelineContentLibraryRoute
+  '/_app/_pp/pipeline/refresh': typeof AppPpPipelineRefreshRoute
+  '/_app/keywords/intelligence/$recommendationId': typeof AppKeywordsIntelligenceRecommendationIdRoute
+  '/_app/_cp/cards/': typeof AppCpCardsIndexRoute
+  '/_app/_pp/pipeline/': typeof AppPpPipelineIndexRoute
+  '/_app/keywords/intelligence/': typeof AppKeywordsIntelligenceIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/login' | '/$'
+  fullPaths:
+    | '/'
+    | '/login'
+    | '/$'
+    | '/assets'
+    | '/experience'
+    | '/iframes'
+    | '/my-tasks'
+    | '/newsletter'
+    | '/service-tickets'
+    | '/settings'
+    | '/transfer-partners'
+    | '/calendar'
+    | '/rss'
+    | '/keywords/ai-visibility'
+    | '/keywords/backlinks'
+    | '/keywords/brand-monitoring'
+    | '/keywords/business-research'
+    | '/keywords/competitors'
+    | '/keywords/content-gap'
+    | '/keywords/domain-overview'
+    | '/keywords/internal-links'
+    | '/keywords/organic-research'
+    | '/keywords/overview'
+    | '/keywords/page-audit'
+    | '/keywords/rank-tracker'
+    | '/keywords/serp'
+    | '/keywords/top-pages'
+    | '/keywords/traffic'
+    | '/keywords/trends'
+    | '/seo/ai-overview'
+    | '/seo/page-audits'
+    | '/seo/position-tracking'
+    | '/traffic-market/ai-traffic'
+    | '/traffic-market/distribution'
+    | '/traffic-market/market-overview'
+    | '/traffic-market/sources'
+    | '/traffic-market/top-pages'
+    | '/zernio/callback'
+    | '/keywords/'
+    | '/seo/'
+    | '/traffic-market/'
+    | '/cards/transfer-partners'
+    | '/pipeline/content-library'
+    | '/pipeline/refresh'
+    | '/keywords/intelligence/$recommendationId'
+    | '/cards/'
+    | '/pipeline/'
+    | '/keywords/intelligence/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/login' | '/$' | '/'
-  id: '__root__' | '/_app' | '/login' | '/_app/$' | '/_app/'
+  to:
+    | '/login'
+    | '/$'
+    | '/'
+    | '/assets'
+    | '/experience'
+    | '/iframes'
+    | '/my-tasks'
+    | '/newsletter'
+    | '/service-tickets'
+    | '/settings'
+    | '/transfer-partners'
+    | '/calendar'
+    | '/rss'
+    | '/keywords/ai-visibility'
+    | '/keywords/backlinks'
+    | '/keywords/brand-monitoring'
+    | '/keywords/business-research'
+    | '/keywords/competitors'
+    | '/keywords/content-gap'
+    | '/keywords/domain-overview'
+    | '/keywords/internal-links'
+    | '/keywords/organic-research'
+    | '/keywords/overview'
+    | '/keywords/page-audit'
+    | '/keywords/rank-tracker'
+    | '/keywords/serp'
+    | '/keywords/top-pages'
+    | '/keywords/traffic'
+    | '/keywords/trends'
+    | '/seo/ai-overview'
+    | '/seo/page-audits'
+    | '/seo/position-tracking'
+    | '/traffic-market/ai-traffic'
+    | '/traffic-market/distribution'
+    | '/traffic-market/market-overview'
+    | '/traffic-market/sources'
+    | '/traffic-market/top-pages'
+    | '/zernio/callback'
+    | '/keywords'
+    | '/seo'
+    | '/traffic-market'
+    | '/cards/transfer-partners'
+    | '/pipeline/content-library'
+    | '/pipeline/refresh'
+    | '/keywords/intelligence/$recommendationId'
+    | '/cards'
+    | '/pipeline'
+    | '/keywords/intelligence'
+  id:
+    | '__root__'
+    | '/_app'
+    | '/login'
+    | '/_app/$'
+    | '/_app/_cp'
+    | '/_app/_pp'
+    | '/_app/assets'
+    | '/_app/experience'
+    | '/_app/iframes'
+    | '/_app/my-tasks'
+    | '/_app/newsletter'
+    | '/_app/service-tickets'
+    | '/_app/settings'
+    | '/_app/transfer-partners'
+    | '/_app/'
+    | '/_app/_pp/calendar'
+    | '/_app/_pp/rss'
+    | '/_app/keywords/ai-visibility'
+    | '/_app/keywords/backlinks'
+    | '/_app/keywords/brand-monitoring'
+    | '/_app/keywords/business-research'
+    | '/_app/keywords/competitors'
+    | '/_app/keywords/content-gap'
+    | '/_app/keywords/domain-overview'
+    | '/_app/keywords/internal-links'
+    | '/_app/keywords/organic-research'
+    | '/_app/keywords/overview'
+    | '/_app/keywords/page-audit'
+    | '/_app/keywords/rank-tracker'
+    | '/_app/keywords/serp'
+    | '/_app/keywords/top-pages'
+    | '/_app/keywords/traffic'
+    | '/_app/keywords/trends'
+    | '/_app/seo/ai-overview'
+    | '/_app/seo/page-audits'
+    | '/_app/seo/position-tracking'
+    | '/_app/traffic-market/ai-traffic'
+    | '/_app/traffic-market/distribution'
+    | '/_app/traffic-market/market-overview'
+    | '/_app/traffic-market/sources'
+    | '/_app/traffic-market/top-pages'
+    | '/_app/zernio/callback'
+    | '/_app/keywords/'
+    | '/_app/seo/'
+    | '/_app/traffic-market/'
+    | '/_app/_cp/cards/transfer-partners'
+    | '/_app/_pp/pipeline/content-library'
+    | '/_app/_pp/pipeline/refresh'
+    | '/_app/keywords/intelligence/$recommendationId'
+    | '/_app/_cp/cards/'
+    | '/_app/_pp/pipeline/'
+    | '/_app/keywords/intelligence/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -94,17 +672,457 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppSplatRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/_cp': {
+      id: '/_app/_cp'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppCpRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/_pp': {
+      id: '/_app/_pp'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppPpRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/assets': {
+      id: '/_app/assets'
+      path: '/assets'
+      fullPath: '/assets'
+      preLoaderRoute: typeof AppAssetsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/experience': {
+      id: '/_app/experience'
+      path: '/experience'
+      fullPath: '/experience'
+      preLoaderRoute: typeof AppExperienceRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/iframes': {
+      id: '/_app/iframes'
+      path: '/iframes'
+      fullPath: '/iframes'
+      preLoaderRoute: typeof AppIframesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/my-tasks': {
+      id: '/_app/my-tasks'
+      path: '/my-tasks'
+      fullPath: '/my-tasks'
+      preLoaderRoute: typeof AppMyTasksRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/newsletter': {
+      id: '/_app/newsletter'
+      path: '/newsletter'
+      fullPath: '/newsletter'
+      preLoaderRoute: typeof AppNewsletterRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/service-tickets': {
+      id: '/_app/service-tickets'
+      path: '/service-tickets'
+      fullPath: '/service-tickets'
+      preLoaderRoute: typeof AppServiceTicketsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/transfer-partners': {
+      id: '/_app/transfer-partners'
+      path: '/transfer-partners'
+      fullPath: '/transfer-partners'
+      preLoaderRoute: typeof AppTransferPartnersRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/_pp/calendar': {
+      id: '/_app/_pp/calendar'
+      path: '/calendar'
+      fullPath: '/calendar'
+      preLoaderRoute: typeof AppPpCalendarRouteImport
+      parentRoute: typeof AppPpRoute
+    }
+    '/_app/_pp/rss': {
+      id: '/_app/_pp/rss'
+      path: '/rss'
+      fullPath: '/rss'
+      preLoaderRoute: typeof AppPpRssRouteImport
+      parentRoute: typeof AppPpRoute
+    }
+    '/_app/keywords/': {
+      id: '/_app/keywords/'
+      path: '/keywords'
+      fullPath: '/keywords/'
+      preLoaderRoute: typeof AppKeywordsIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/ai-visibility': {
+      id: '/_app/keywords/ai-visibility'
+      path: '/keywords/ai-visibility'
+      fullPath: '/keywords/ai-visibility'
+      preLoaderRoute: typeof AppKeywordsAiVisibilityRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/backlinks': {
+      id: '/_app/keywords/backlinks'
+      path: '/keywords/backlinks'
+      fullPath: '/keywords/backlinks'
+      preLoaderRoute: typeof AppKeywordsBacklinksRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/brand-monitoring': {
+      id: '/_app/keywords/brand-monitoring'
+      path: '/keywords/brand-monitoring'
+      fullPath: '/keywords/brand-monitoring'
+      preLoaderRoute: typeof AppKeywordsBrandMonitoringRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/business-research': {
+      id: '/_app/keywords/business-research'
+      path: '/keywords/business-research'
+      fullPath: '/keywords/business-research'
+      preLoaderRoute: typeof AppKeywordsBusinessResearchRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/competitors': {
+      id: '/_app/keywords/competitors'
+      path: '/keywords/competitors'
+      fullPath: '/keywords/competitors'
+      preLoaderRoute: typeof AppKeywordsCompetitorsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/content-gap': {
+      id: '/_app/keywords/content-gap'
+      path: '/keywords/content-gap'
+      fullPath: '/keywords/content-gap'
+      preLoaderRoute: typeof AppKeywordsContentGapRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/domain-overview': {
+      id: '/_app/keywords/domain-overview'
+      path: '/keywords/domain-overview'
+      fullPath: '/keywords/domain-overview'
+      preLoaderRoute: typeof AppKeywordsDomainOverviewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/internal-links': {
+      id: '/_app/keywords/internal-links'
+      path: '/keywords/internal-links'
+      fullPath: '/keywords/internal-links'
+      preLoaderRoute: typeof AppKeywordsInternalLinksRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/organic-research': {
+      id: '/_app/keywords/organic-research'
+      path: '/keywords/organic-research'
+      fullPath: '/keywords/organic-research'
+      preLoaderRoute: typeof AppKeywordsOrganicResearchRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/overview': {
+      id: '/_app/keywords/overview'
+      path: '/keywords/overview'
+      fullPath: '/keywords/overview'
+      preLoaderRoute: typeof AppKeywordsOverviewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/page-audit': {
+      id: '/_app/keywords/page-audit'
+      path: '/keywords/page-audit'
+      fullPath: '/keywords/page-audit'
+      preLoaderRoute: typeof AppKeywordsPageAuditRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/rank-tracker': {
+      id: '/_app/keywords/rank-tracker'
+      path: '/keywords/rank-tracker'
+      fullPath: '/keywords/rank-tracker'
+      preLoaderRoute: typeof AppKeywordsRankTrackerRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/serp': {
+      id: '/_app/keywords/serp'
+      path: '/keywords/serp'
+      fullPath: '/keywords/serp'
+      preLoaderRoute: typeof AppKeywordsSerpRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/top-pages': {
+      id: '/_app/keywords/top-pages'
+      path: '/keywords/top-pages'
+      fullPath: '/keywords/top-pages'
+      preLoaderRoute: typeof AppKeywordsTopPagesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/traffic': {
+      id: '/_app/keywords/traffic'
+      path: '/keywords/traffic'
+      fullPath: '/keywords/traffic'
+      preLoaderRoute: typeof AppKeywordsTrafficRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/trends': {
+      id: '/_app/keywords/trends'
+      path: '/keywords/trends'
+      fullPath: '/keywords/trends'
+      preLoaderRoute: typeof AppKeywordsTrendsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/seo/': {
+      id: '/_app/seo/'
+      path: '/seo'
+      fullPath: '/seo/'
+      preLoaderRoute: typeof AppSeoIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/seo/ai-overview': {
+      id: '/_app/seo/ai-overview'
+      path: '/seo/ai-overview'
+      fullPath: '/seo/ai-overview'
+      preLoaderRoute: typeof AppSeoAiOverviewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/seo/page-audits': {
+      id: '/_app/seo/page-audits'
+      path: '/seo/page-audits'
+      fullPath: '/seo/page-audits'
+      preLoaderRoute: typeof AppSeoPageAuditsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/seo/position-tracking': {
+      id: '/_app/seo/position-tracking'
+      path: '/seo/position-tracking'
+      fullPath: '/seo/position-tracking'
+      preLoaderRoute: typeof AppSeoPositionTrackingRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/': {
+      id: '/_app/traffic-market/'
+      path: '/traffic-market'
+      fullPath: '/traffic-market/'
+      preLoaderRoute: typeof AppTrafficMarketIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/ai-traffic': {
+      id: '/_app/traffic-market/ai-traffic'
+      path: '/traffic-market/ai-traffic'
+      fullPath: '/traffic-market/ai-traffic'
+      preLoaderRoute: typeof AppTrafficMarketAiTrafficRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/distribution': {
+      id: '/_app/traffic-market/distribution'
+      path: '/traffic-market/distribution'
+      fullPath: '/traffic-market/distribution'
+      preLoaderRoute: typeof AppTrafficMarketDistributionRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/market-overview': {
+      id: '/_app/traffic-market/market-overview'
+      path: '/traffic-market/market-overview'
+      fullPath: '/traffic-market/market-overview'
+      preLoaderRoute: typeof AppTrafficMarketMarketOverviewRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/sources': {
+      id: '/_app/traffic-market/sources'
+      path: '/traffic-market/sources'
+      fullPath: '/traffic-market/sources'
+      preLoaderRoute: typeof AppTrafficMarketSourcesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/traffic-market/top-pages': {
+      id: '/_app/traffic-market/top-pages'
+      path: '/traffic-market/top-pages'
+      fullPath: '/traffic-market/top-pages'
+      preLoaderRoute: typeof AppTrafficMarketTopPagesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/zernio/callback': {
+      id: '/_app/zernio/callback'
+      path: '/zernio/callback'
+      fullPath: '/zernio/callback'
+      preLoaderRoute: typeof AppZernioCallbackRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/_cp/cards/': {
+      id: '/_app/_cp/cards/'
+      path: '/cards'
+      fullPath: '/cards/'
+      preLoaderRoute: typeof AppCpCardsIndexRouteImport
+      parentRoute: typeof AppCpRoute
+    }
+    '/_app/_cp/cards/transfer-partners': {
+      id: '/_app/_cp/cards/transfer-partners'
+      path: '/cards/transfer-partners'
+      fullPath: '/cards/transfer-partners'
+      preLoaderRoute: typeof AppCpCardsTransferPartnersRouteImport
+      parentRoute: typeof AppCpRoute
+    }
+    '/_app/_pp/pipeline/': {
+      id: '/_app/_pp/pipeline/'
+      path: '/pipeline'
+      fullPath: '/pipeline/'
+      preLoaderRoute: typeof AppPpPipelineIndexRouteImport
+      parentRoute: typeof AppPpRoute
+    }
+    '/_app/_pp/pipeline/content-library': {
+      id: '/_app/_pp/pipeline/content-library'
+      path: '/pipeline/content-library'
+      fullPath: '/pipeline/content-library'
+      preLoaderRoute: typeof AppPpPipelineContentLibraryRouteImport
+      parentRoute: typeof AppPpRoute
+    }
+    '/_app/_pp/pipeline/refresh': {
+      id: '/_app/_pp/pipeline/refresh'
+      path: '/pipeline/refresh'
+      fullPath: '/pipeline/refresh'
+      preLoaderRoute: typeof AppPpPipelineRefreshRouteImport
+      parentRoute: typeof AppPpRoute
+    }
+    '/_app/keywords/intelligence/': {
+      id: '/_app/keywords/intelligence/'
+      path: '/keywords/intelligence'
+      fullPath: '/keywords/intelligence/'
+      preLoaderRoute: typeof AppKeywordsIntelligenceIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/keywords/intelligence/$recommendationId': {
+      id: '/_app/keywords/intelligence/$recommendationId'
+      path: '/keywords/intelligence/$recommendationId'
+      fullPath: '/keywords/intelligence/$recommendationId'
+      preLoaderRoute: typeof AppKeywordsIntelligenceRecommendationIdRouteImport
+      parentRoute: typeof AppRoute
+    }
   }
 }
 
+interface AppCpRouteChildren {
+  AppCpCardsTransferPartnersRoute: typeof AppCpCardsTransferPartnersRoute
+  AppCpCardsIndexRoute: typeof AppCpCardsIndexRoute
+}
+
+const AppCpRouteChildren: AppCpRouteChildren = {
+  AppCpCardsTransferPartnersRoute: AppCpCardsTransferPartnersRoute,
+  AppCpCardsIndexRoute: AppCpCardsIndexRoute,
+}
+
+const AppCpRouteWithChildren = AppCpRoute._addFileChildren(AppCpRouteChildren)
+
+interface AppPpRouteChildren {
+  AppPpCalendarRoute: typeof AppPpCalendarRoute
+  AppPpRssRoute: typeof AppPpRssRoute
+  AppPpPipelineContentLibraryRoute: typeof AppPpPipelineContentLibraryRoute
+  AppPpPipelineRefreshRoute: typeof AppPpPipelineRefreshRoute
+  AppPpPipelineIndexRoute: typeof AppPpPipelineIndexRoute
+}
+
+const AppPpRouteChildren: AppPpRouteChildren = {
+  AppPpCalendarRoute: AppPpCalendarRoute,
+  AppPpRssRoute: AppPpRssRoute,
+  AppPpPipelineContentLibraryRoute: AppPpPipelineContentLibraryRoute,
+  AppPpPipelineRefreshRoute: AppPpPipelineRefreshRoute,
+  AppPpPipelineIndexRoute: AppPpPipelineIndexRoute,
+}
+
+const AppPpRouteWithChildren = AppPpRoute._addFileChildren(AppPpRouteChildren)
+
 interface AppRouteChildren {
   AppSplatRoute: typeof AppSplatRoute
+  AppCpRoute: typeof AppCpRouteWithChildren
+  AppPpRoute: typeof AppPpRouteWithChildren
+  AppAssetsRoute: typeof AppAssetsRoute
+  AppExperienceRoute: typeof AppExperienceRoute
+  AppIframesRoute: typeof AppIframesRoute
+  AppMyTasksRoute: typeof AppMyTasksRoute
+  AppNewsletterRoute: typeof AppNewsletterRoute
+  AppServiceTicketsRoute: typeof AppServiceTicketsRoute
+  AppSettingsRoute: typeof AppSettingsRoute
+  AppTransferPartnersRoute: typeof AppTransferPartnersRoute
   AppIndexRoute: typeof AppIndexRoute
+  AppKeywordsAiVisibilityRoute: typeof AppKeywordsAiVisibilityRoute
+  AppKeywordsBacklinksRoute: typeof AppKeywordsBacklinksRoute
+  AppKeywordsBrandMonitoringRoute: typeof AppKeywordsBrandMonitoringRoute
+  AppKeywordsBusinessResearchRoute: typeof AppKeywordsBusinessResearchRoute
+  AppKeywordsCompetitorsRoute: typeof AppKeywordsCompetitorsRoute
+  AppKeywordsContentGapRoute: typeof AppKeywordsContentGapRoute
+  AppKeywordsDomainOverviewRoute: typeof AppKeywordsDomainOverviewRoute
+  AppKeywordsInternalLinksRoute: typeof AppKeywordsInternalLinksRoute
+  AppKeywordsOrganicResearchRoute: typeof AppKeywordsOrganicResearchRoute
+  AppKeywordsOverviewRoute: typeof AppKeywordsOverviewRoute
+  AppKeywordsPageAuditRoute: typeof AppKeywordsPageAuditRoute
+  AppKeywordsRankTrackerRoute: typeof AppKeywordsRankTrackerRoute
+  AppKeywordsSerpRoute: typeof AppKeywordsSerpRoute
+  AppKeywordsTopPagesRoute: typeof AppKeywordsTopPagesRoute
+  AppKeywordsTrafficRoute: typeof AppKeywordsTrafficRoute
+  AppKeywordsTrendsRoute: typeof AppKeywordsTrendsRoute
+  AppSeoAiOverviewRoute: typeof AppSeoAiOverviewRoute
+  AppSeoPageAuditsRoute: typeof AppSeoPageAuditsRoute
+  AppSeoPositionTrackingRoute: typeof AppSeoPositionTrackingRoute
+  AppTrafficMarketAiTrafficRoute: typeof AppTrafficMarketAiTrafficRoute
+  AppTrafficMarketDistributionRoute: typeof AppTrafficMarketDistributionRoute
+  AppTrafficMarketMarketOverviewRoute: typeof AppTrafficMarketMarketOverviewRoute
+  AppTrafficMarketSourcesRoute: typeof AppTrafficMarketSourcesRoute
+  AppTrafficMarketTopPagesRoute: typeof AppTrafficMarketTopPagesRoute
+  AppZernioCallbackRoute: typeof AppZernioCallbackRoute
+  AppKeywordsIndexRoute: typeof AppKeywordsIndexRoute
+  AppSeoIndexRoute: typeof AppSeoIndexRoute
+  AppTrafficMarketIndexRoute: typeof AppTrafficMarketIndexRoute
+  AppKeywordsIntelligenceRecommendationIdRoute: typeof AppKeywordsIntelligenceRecommendationIdRoute
+  AppKeywordsIntelligenceIndexRoute: typeof AppKeywordsIntelligenceIndexRoute
 }
 
 const AppRouteChildren: AppRouteChildren = {
   AppSplatRoute: AppSplatRoute,
+  AppCpRoute: AppCpRouteWithChildren,
+  AppPpRoute: AppPpRouteWithChildren,
+  AppAssetsRoute: AppAssetsRoute,
+  AppExperienceRoute: AppExperienceRoute,
+  AppIframesRoute: AppIframesRoute,
+  AppMyTasksRoute: AppMyTasksRoute,
+  AppNewsletterRoute: AppNewsletterRoute,
+  AppServiceTicketsRoute: AppServiceTicketsRoute,
+  AppSettingsRoute: AppSettingsRoute,
+  AppTransferPartnersRoute: AppTransferPartnersRoute,
   AppIndexRoute: AppIndexRoute,
+  AppKeywordsAiVisibilityRoute: AppKeywordsAiVisibilityRoute,
+  AppKeywordsBacklinksRoute: AppKeywordsBacklinksRoute,
+  AppKeywordsBrandMonitoringRoute: AppKeywordsBrandMonitoringRoute,
+  AppKeywordsBusinessResearchRoute: AppKeywordsBusinessResearchRoute,
+  AppKeywordsCompetitorsRoute: AppKeywordsCompetitorsRoute,
+  AppKeywordsContentGapRoute: AppKeywordsContentGapRoute,
+  AppKeywordsDomainOverviewRoute: AppKeywordsDomainOverviewRoute,
+  AppKeywordsInternalLinksRoute: AppKeywordsInternalLinksRoute,
+  AppKeywordsOrganicResearchRoute: AppKeywordsOrganicResearchRoute,
+  AppKeywordsOverviewRoute: AppKeywordsOverviewRoute,
+  AppKeywordsPageAuditRoute: AppKeywordsPageAuditRoute,
+  AppKeywordsRankTrackerRoute: AppKeywordsRankTrackerRoute,
+  AppKeywordsSerpRoute: AppKeywordsSerpRoute,
+  AppKeywordsTopPagesRoute: AppKeywordsTopPagesRoute,
+  AppKeywordsTrafficRoute: AppKeywordsTrafficRoute,
+  AppKeywordsTrendsRoute: AppKeywordsTrendsRoute,
+  AppSeoAiOverviewRoute: AppSeoAiOverviewRoute,
+  AppSeoPageAuditsRoute: AppSeoPageAuditsRoute,
+  AppSeoPositionTrackingRoute: AppSeoPositionTrackingRoute,
+  AppTrafficMarketAiTrafficRoute: AppTrafficMarketAiTrafficRoute,
+  AppTrafficMarketDistributionRoute: AppTrafficMarketDistributionRoute,
+  AppTrafficMarketMarketOverviewRoute: AppTrafficMarketMarketOverviewRoute,
+  AppTrafficMarketSourcesRoute: AppTrafficMarketSourcesRoute,
+  AppTrafficMarketTopPagesRoute: AppTrafficMarketTopPagesRoute,
+  AppZernioCallbackRoute: AppZernioCallbackRoute,
+  AppKeywordsIndexRoute: AppKeywordsIndexRoute,
+  AppSeoIndexRoute: AppSeoIndexRoute,
+  AppTrafficMarketIndexRoute: AppTrafficMarketIndexRoute,
+  AppKeywordsIntelligenceRecommendationIdRoute:
+    AppKeywordsIntelligenceRecommendationIdRoute,
+  AppKeywordsIntelligenceIndexRoute: AppKeywordsIntelligenceIndexRoute,
 }
 
 const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)

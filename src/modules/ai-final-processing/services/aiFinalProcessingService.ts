@@ -111,19 +111,45 @@ export async function testZeroGpt(): Promise<ZeroGptTestResponse> {
 
 // ── Live queue-count subscriptions ───────────────────────────────────────────
 // Production reads these from onSnapshot queries on the articles collection.
-// The mock emits static in-memory counts (rewire to the pipeline module's
-// article store when that module's own live store lands).
+// Wired to the pipeline module's in-memory article store so counts stay live
+// as articles move through stages and processing states.
+
+import { subscribeToArticles } from '@/modules/pipeline/services/firestoreSubscriptions';
+import type { PipelineArticle } from '@/modules/pipeline/types';
+
+const ACTIVE_STATUSES = ['queued', 'zerogpt_processing', 'gemma_processing', 'validating'];
+const IN_FLIGHT = ['zerogpt_processing', 'gemma_processing', 'validating'];
+/** The watermark-removal phase: the dedicated stage plus legacy rows parked
+ * in Publish from before the stage existed (the server sweep covers both). */
+const WATERMARK_PHASE_STAGES = ['Watermark Removal', 'Publish'];
+
+type ArticleProcessingFields = Pick<PipelineArticle, 'stage'> & {
+  finalProcessing?: { status?: string } | null;
+};
 
 export function subscribeToQueueCounts(listener: (counts: Record<string, number>) => void): () => void {
-  const t = setTimeout(() => {
-    listener({ queued, zerogpt_processing: 0, gemma_processing: 1, validating: 0 });
-  }, 250);
-  return () => clearTimeout(t);
+  return subscribeToArticles((articles) => {
+    const counts: Record<string, number> = {};
+    for (const article of articles as ArticleProcessingFields[]) {
+      const status = article.finalProcessing?.status;
+      if (status && ACTIVE_STATUSES.includes(status)) {
+        counts[status] = (counts[status] ?? 0) + 1;
+      }
+    }
+    listener(counts);
+  });
 }
 
 export function subscribeToWatermarkPhaseCounts(listener: (pending: number, inFlight: number) => void): () => void {
-  const t = setTimeout(() => {
-    listener(Math.max(queued, 1), 0);
-  }, 250);
-  return () => clearTimeout(t);
+  return subscribeToArticles((articles) => {
+    let pending = 0;
+    let inFlight = 0;
+    for (const article of articles as ArticleProcessingFields[]) {
+      if (!WATERMARK_PHASE_STAGES.includes(article.stage)) continue;
+      const status = article.finalProcessing?.status;
+      if (!status || status === 'queued') pending += 1;
+      else if (IN_FLIGHT.includes(status)) inFlight += 1;
+    }
+    listener(pending, inFlight);
+  });
 }
